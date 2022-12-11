@@ -134,12 +134,12 @@ function buildCharts(sample) {
       var result = resultArray[0];
      
     // Create a variable that converts the washing frequency to a floating point number.
-    var washFre = parseFloat(result.wfreq); 
+    var washFreq = parseFloat(result.wfreq); 
 
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
       domain: d3.select(optionChanged),
-      value: washFre, 
+      value: washFreq, 
       type: "indicator",
       mode: "gauge+number",
       title: { text: "<b>Belly Button Wash Frequency</b><br> Number of Scrubs per Week"},
@@ -153,11 +153,6 @@ function buildCharts(sample) {
           { range: [6, 8], color: "lightgreen"},
           { range: [8, 10], color: "green"}
         ],
-        threshold: {
-          line: { color: "lime", width: 6},
-          thickness: 1.0,
-          value: 10
-        }
       }
 
     }
